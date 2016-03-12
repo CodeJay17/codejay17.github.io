@@ -1,31 +1,62 @@
 <!DOCTYPE html>
 <html>
-<body>
 
-<h1>
+<head>
+  body, div { 
+   padding: 0; 
+   margin: 0; 
+   border: solid 1px; 
+   width: 900px; 
+} 
+#header, #footer { 
+   width: 898px; 
+   clear: both; 
+   height: 100px; 
+} 
+#righttop, #rightbottom{ 
+   float: right; 
+   width: 150px; 
+   height: 200px; 
+} 
+#rightbottom { 
+   clear: right; 
+} 
+#content { 
+   float: left; 
+   width: 591px; 
+   height: 403px; 
+} 
+#lefttop { 
+   width: 150px; 
+   height: 100px; 
+   float: left; 
+}    
   
-  Square Game
   
-</h1>
-
-<canvas id="myCanvas" width="500" height="400" style="border:1px solid #c3c3c3;">
-Your browser does not support the HTML5 canvas tag.
-</canvas>
-
-<script>
-var c = document.getElementById("myCanvas");
-var ctx = c.getContext("2d");
-ctx.fillStyle = "#e64d00";
-ctx.fillRect(10,10,10,10);
-var c = document.getElementById("myCanvas");
-var ctx = c.getContext("2d");
-ctx.beginPath();
-ctx.moveTo(0, 0);
-ctx.lineTo(300, 150);
-ctx.stroke();
-</script>
+  
+  
+  
+  
+  
+  
+  
+</head>
 
 
 
-</body>
+
+
+
+
+<body> 
+  <div id="header">Header 900x100 px</div> 
+  <div id="righttop">RightTop <br />150x200 px</div> 
+  <div id="lefttop">LeftTop 150x75 px</div> 
+  <div id="content">Content 600x400 px</div> 
+  <div id="rightbottom">RightBottom 150x200 px</div> 
+  <div id="footer">Footer 900x100 px</div> 
+</body> 
+
+
+
 </html>
