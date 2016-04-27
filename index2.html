@@ -5,7 +5,10 @@
 	
 <title>JaysGraphics</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">	
+<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+<style>
+.mySlides {display:none;}
+</style>	
 	
 <style>
 #header {
@@ -62,35 +65,26 @@ Amazing wild life photos
 
 <div id="section">
 <h2>Photos</h2>
-<p><div class="w3-content" style="max-width:800px;position:relative">
-
-<img class="mySlides" src="juliojones1000.jpg" style="width:100%">
-<img class="mySlides" src="dontemoncrief1000.jpg" style="width:100%">
-<img class="mySlides" src="Odellredskins1000.jpg" style="width:100%">
-<img class="mySlides" src="deseanjacksonskin1000.jpg" style="width:100%">
-
-<a class="w3-btn-floating" style="position:absolute;top:45%;left:0" onclick="plusDivs(-1)">❮</a>
-<a class="w3-btn-floating" style="position:absolute;top:45%;right:0" onclick="plusDivs(1)">❯</a>
-
+<p><div class="w3-content w3-section" style="max-width:500px">
+  <img class="mySlides" src="" style="width:100%">
+  <img class="mySlides" src="" style="width:100%">
+  <img class="mySlides" src="" style="width:100%">
 </div>
 
 <script>
-var slideIndex = 1;
-showDivs(slideIndex);
+var myIndex = 0;
+carousel();
 
-function plusDivs(n) {
-  showDivs(slideIndex += n);
-}
-
-function showDivs(n) {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  if (n > x.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = x.length} ;
-  for (i = 0; i < x.length; i++) {
-     x[i].style.display = "none";  
-  }
-  x[slideIndex-1].style.display = "block";  
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 2000); // Change image every 5 seconds
 }
 </script>	</p>
 
